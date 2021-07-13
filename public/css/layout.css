@@ -1,0 +1,43 @@
+body{
+    background-image: url("../images/b1.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    border-radius: 6px;
+    margin-right: 5px;
+}
+.bg-peach{
+    background-color: #fda585;
+}
+.login-div{
+    float: left;
+    margin-left: 15px;
+}
+.card{
+    border-radius: 50px!important;
+    border: none;
+}
+.card-header{
+    background: rgba(0, 0, 0, 0.05)!important;
+    border-radius: 50px 50px 0px 0px!important;
+    border-bottom: none!important;
+}
+.card-body{
+    background-color: rgba(0, 0, 0, 0.05)!important;
+    border-radius: 0px 0px 50px 50px!important;
+    justify-content: center!important;
+}
+.login-button{
+    width: 330px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #fda585;
+}
+.login-button:hover{
+    background-color: #a06049;
+    color: white;
+    transition: 0.3s;
+}
