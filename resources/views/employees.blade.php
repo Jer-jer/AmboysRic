@@ -87,7 +87,6 @@
                 $(".modal-body #id").val(data.id);
                 $(".modal-body #employee-name").val(data.name);
                 $(".modal-body #email").val(data.email);
-                $(".modal-body #password").val(data.password);
                 $(".modal-body #address").val(data.address);
                 $(".modal-body #contact-number").val(data.contact_no);        
                 $(".modal-body #stats").val(data.status);

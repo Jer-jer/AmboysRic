@@ -43,7 +43,7 @@
     @endif
     <link href="{{ asset('css/sidebarnav.css') }}" rel="stylesheet">
     <header class="header" id="header">
-        <div class="header_toggle menu"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_toggle menu"> <i class='fas fa-bars' id="header-toggle"></i> </div>
         <div class="nav_credentials title"> {{ Auth::user()->position }} </div>
         <div class="nav_credentials"> {{ Auth::user()->name }} </div>
     </header>
@@ -56,21 +56,21 @@
                 </a>
                 <div class="nav_list">
                     <a href="{{ route('inventory') }}" class="nav_link {{ (request()->is('/')) ? 'active' : '' }}">
-                        <i class='bx bx-grid-alt nav_icon'></i>
-                        <span class="nav_name">Dashboard</span>
+                        <i class="fas fa-hamburger nav_icon"></i>
+                        <span class="nav_name">Inventory</span>
                     </a>
                     <a href="{{ route('shopping_cart') }}" class="nav_link {{ (request()->is('shopping_cart')) ? 'active' : '' }}">
-                        <i class='bx bx-cart nav_icon'></i>
+                        <i class="fas fa-shopping-cart nav_icon"></i>
                         <span class="nav_name">Orders</span>
                     </a>
                     @if ( Auth::user()->position == 'MANAGER')
                     <a href="{{ route('employees') }}" class="nav_link {{ (request()->is('employees')) ? 'active' : '' }}">
-                        <i class='bx bx-user nav_icon'></i>
+                        <i class="fas fa-users nav_icon"></i>
                         <span class="nav_name">Employees</span>
                     </a>
                     @else
                     <button class="nav_link button" data-toggle="modal" data-target="#checkAdmin">
-                        <i class='bx bx-user nav_icon'></i>
+                        <i class="fas fa-users nav_icon"></i>
                         <span class="nav_name">Employees</span>
                     </button>
                     @endif
@@ -79,8 +79,8 @@
             <div>
                 <a class="nav_link" href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                    <i class='bx bx-log-out nav_icon'></i>
-                    <span class="nav_name">SignOut</span>
+                    <i class="fas fa-sign-out-alt nav_icon"></i>
+                    <span class="nav_name">Sign Out</span>
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
